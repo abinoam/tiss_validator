@@ -1,8 +1,10 @@
 # TissValidator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tiss_validator`. To experiment with that code, run `bin/console` for an interactive prompt.
+TissValidator is a simple wrapper around Nokogiri.
+Used to validate ANS TISS XML files.
 
-TODO: Delete this and the text above, and describe your gem
+*ANS*: Agência Nacional de Saúde / National Health Agency (of Brazil)
+*TISS*: Troca de Informação em Saúde Suplementar / Suplementary health care providers information exchange. An ANS standard.
 
 ## Installation
 
@@ -22,7 +24,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Inside Ruby, as a module.
+
+```ruby
+TissValidator.errors(xml_file_path)
+```
+
+At the command line.
+
+```sh
+$ tiss_validate <xml_file_path>
+```
 
 ## Development
 
