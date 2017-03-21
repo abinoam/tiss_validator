@@ -9,8 +9,17 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Abinoam P. Marques Jr."]
   spec.email         = ["abinoam@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{TISS Validator: validates xml file against ANS TISS xsd}
+  spec.description   = <<~END
+    TISS Validator takes a TISS xml file and validates it against
+      the ANS schemas (xsd files). It's a really simple wrapper around Nokogiri.
+
+    TISS: Troca de Informação em Saúde Suplementar. A brazilian standard for
+      information exchange between private healthcare providers.
+
+    ANS: Agência Nacional de Saúde. National Health Agency from Brazil.
+  END
+
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,4 +42,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.required_ruby_version = ">= 2.3"
+  spec.add_dependency "nokogiri"
 end
