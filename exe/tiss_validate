@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'tiss_validator'
+
+file_name = ARGV.first
+
+puts "XML File: #{file_name}"
+puts "XSD Schema: #{TissValidator::TISS_SCHEMA_PATH}"
+
+errors = TissValidator.errors(file_name)
+
+if errors.empty?
+  puts "The xml file has passed validation!"
+else
+  puts "Errors:"
+  puts errors
+
+  exit 1 # Exit with an error exit code
+end
